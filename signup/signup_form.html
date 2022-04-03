@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>회원정보입력</legend>
+            <ul>
+                <li>
+                    <label for="id">ID</label>
+                    <input type="text" minlength="6" maxlength="12" required placeholder="ID입력" id="id">
+                    <button type="button">중복확인</button>
+                </li>
+
+                <li>
+                    <label for="PW">PW</label>
+                    <input type="password" minlength="6" maxlength="12" required placeholder="PW입력" id="PW">
+                    <input type="password" minlength="6" maxlength="12" required placeholder="PW 확인" id="PW">
+                </li>
+
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id ="name" required placeholder="이름을 입력하세요.">
+                </li>
+                <li>    
+                    <label for="phone_num">이름</label>
+                    <input type="text" id ="phone_num" required placeholder="휴대전화번호를 - 없이 입력하세요.">
+                </li>
+            </ul>
+            <h4>본인인증</h4>
+            <ul>
+                <li>
+                    <label for="email_auth">e-mail</label>
+                    <input type="text" id="email_auth" required placeholder="인증받으실 이메일 입력"> 
+                    <button type="button">확인메일전송</button>
+                </li>
+            </ul>
+
+            <button type="submit">
+                가입완료
+            </button>
+        </fieldset>
+    </form>
+
+    <footer>
+        주식회사 @@--
+    </footer>
+</body>
+</html>
