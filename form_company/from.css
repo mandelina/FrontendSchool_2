@@ -1,0 +1,150 @@
+html, body, div,
+h1,h2, h3, h4, h5, h6,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, section
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    margin: auto;
+    width: 700px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+/* css초기화 */
+
+body{
+    background-color: rgb(239, 235, 249);
+}
+
+.wrapper header{
+    border-top: 15px solid rgb(70, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.heading{
+    padding: 20px; 
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.email , .sns{
+    color: rgb(124, 124, 124);
+    font-weight: 600;
+    margin: 20px;
+}
+
+.sns:hover{
+    text-decoration: underline;
+}
+
+.sns{
+    color: RGB(39, 123, 238);
+    text-decoration: none;
+}
+
+.company_servey{
+    border-bottom: 2px solid rgb(221, 221, 221);
+    font-weight: 600;
+    padding: 20px;
+    
+}
+
+.question{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px;
+    margin:25px; 
+}
+
+.question div {
+    margin: 15px;
+    padding: 10px;
+}
+
+.question p{
+    font-weight: 800;
+    margin-left: 25px;
+}
+
+.question input{
+    border: 0;
+    border-bottom: 1px solid gainsboro;
+
+}
+
+.self_talk{
+    width: 500px;
+    padding: 10px;
+}
+
+.dream{
+    width: 350px;
+    padding: 10px;
+}
+.btn_class{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit:hover{
+    background-color: rgb(77, 40, 146); ;
+}
+
+.submit{
+    border:none;
+    border-radius: 6px;
+    background-color: rgb(103, 59, 183);
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    width: 90px;
+}
+
+.reset:hover{
+    text-decoration: underline;
+    
+}
+
+.reset{
+    border: none;
+    color:rgb(122, 82, 197);
+    font-weight: 700;
+    margin: 20px;
+
+}
+
+.title{
+    color: rgb(92, 92, 92);
+}
+
+select{
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}
+

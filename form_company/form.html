@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사설문조사</title>
+    <link rel="stylesheet" href="from.css">
+</head>
+<body>
+
+<main class="wrapper">
+    <header>
+        <h1 class="heading">나와 잘 맞는 회사는?</h1>
+        <p class="company_servey"> 가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미없다.</p>
+        <p >
+            <span class="email"> alswn9908@gmail.com (공유되지않음)</span>
+            <a href="" class="sns">계정전환</a>
+        </p>
+    </header>
+
+    <form action="" method="post">
+        <fieldset class="wrapper">
+            <div class="question">
+                <p>
+                    다음 문자중에 왠지 마음에 드는것을 하나 고르세요.
+                </p>
+                <div>   
+                    <input type="radio" name="회사" id="naver" value="네">
+                    <label for="naver">네</label>
+                </div>
+                <div>
+                    <input type="radio" name="회사" id="kakao" value="카">
+                    <label for="kakao">카</label>
+                </div>
+                <div>
+                    
+                    <input type="radio" name="회사" 
+                    id="line" value="">
+                    <label for="line">라</label>
+                </div>
+                <div>
+                    <input type="radio" name="회사" id="koopang" value="쿠">
+                    <label for="koopang">쿠</label>
+                </div>
+                <div>
+                    <input type="radio" name="회사" id="jejucoding" value="베">
+                    <label for="jejucoding">베</label>
+                </div>
+            </div>    
+
+            <div class="question">
+                <p>친구와 문자를 합니다. 다음중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</p>
+                <div>
+                    <input type="checkbox" name="메신저" id="kakao" value="카카오톡">
+                    <label for="kakao">카카오톡</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="메신저" id="line" value="라인">
+                    <label for="line">라인</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="메신저" id="instagram" value="instagram">
+                    <label for="instagram">인스타그램</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="메신저" id="nate" value="nate">
+                    <label for="nate">네이트온</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="메신저" id="budy" value="budy">
+                    <label for="budy">버디버디</label>
+                </div>
+
+            </div>  
+
+            
+            <div class="question">
+                <p>면접에서 자신의 포부를 한 문장으로 얘기한다면? </p>
+                <div>
+                    <input type="text" placeholder="내 답변" class="dream" >
+                </div>
+            </div> 
+    
+            <div class="question">
+                <p>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고싶은 말은?</p>
+                <div>
+                    <input type="text" class="self_talk" placeholder="내 답변">
+                </div>
+
+            </div> 
+
+            
+            <div class="question">
+                <div>
+                    <label for="interview">다음중 기술면접때 듣고 싶은 질문이 아닌것은?</label>
+                </div>
+                <div>
+                <select type="text" id="interview" list="interview" name="interview">
+                    <option value="">선택</option>
+                    <option value="1">홈페이지가 사용자에게 보이는 순서에 대해서 설명해주세요.</option>
+                    <option value="2">호이스팅에 대해 설명해주세요.</option>
+                    <option value="3">클로저는 무었인가요? 원리와 왜 사용하는지 설명해주세요.</option>
+                    <option value="4.">GET과 POST가 어떻게 다른지 설명해주세요.</option>
+                    </select>
+                </div>
+            </div> 
+
+            
+            <div class="question">
+                <p>취업을 희망하는 날짜를 선택해주세요</p>
+                <div>
+                    <label for="date" class="title">날짜</label>
+                </div>  
+                <div>
+                    <input type="date" id="date" name="date" value="date" min="2022-05-01">
+                    date
+                </div>
+            </div> 
+
+            <div class="question" >
+                <p>업무를 시작 하기에 적당한 시간을 고르세요</p>
+                <div>
+                    <label for="time"  class="title" >시간</label >
+                </div>  
+                <div>
+                    <input type="time" id="time" name="time" value="time">
+                </div>
+            </div> 
+
+        </fieldset>
+        <span class="btn_class">
+        
+        <button type="submit" class="submit">제출</button>
+        <button type="reset" class="reset">양식 지우기</button>
+    </span>
+    </form>
+</main>
+
+</body>
+</html>
