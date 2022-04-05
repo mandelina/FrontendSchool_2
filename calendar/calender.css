@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script&display=swap');
+
+/* reset */
+header,h1,p{
+    margin: 0;
+}
+
+td:nth-child(1),th:nth-child(1){
+    color: red;
+}
+td:nth-child(7),th:nth-child(7){
+    color: blue;
+}
+
+.wrapper{
+    margin: 50px;
+    font-family: 'Arvo', serif;
+    font-family: 'Dancing Script', cursive;
+}
+
+.wrapper h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.wrapper p{
+    text-align: right;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin: 50px;
+}
+
+.cal{
+    text-align: center;
+}
+
+table{
+    display: inline-block;
+    margin : 30px;
+    width: 255px;
+    height: 260px;
+}
+
+caption{
+    font-weight: 700;
+    margin: 20px;
+}
+.cal_top, .cal_bottom{
+    text-align: center;
+    display: inline-block; 
+    overflow: hidden;
+}
+.Apr , .Jun{
+    float: left;
+}
+
+.May, .Jul{
+    float: right;
+}
