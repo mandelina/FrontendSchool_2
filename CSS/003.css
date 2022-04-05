@@ -1,0 +1,5 @@
+@import "003_ex.css";
+/* 가장 맨위에 선언해야한다. */
+p{
+    background-color: rgb(255, 42, 78);
+}
