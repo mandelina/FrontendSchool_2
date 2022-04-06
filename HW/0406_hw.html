@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* class값을 a로 가지고  타입이 li인 요소 바로 뒤에 있는곳에 적용*/
+      /* 여기선 Mango , Banana */
+      .a + li {
+        background: red;
+      }
+
+      /* 형제요소로 2개의 <li>를 가진 <li>에 적용된다. */
+      /* 즉 여기선 , Banana , Melon , Strawberry */
+      li + li + li {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Apple</li>
+      <li class="a">Mango</li>
+      <li class="a">Banana</li>
+      <li>Melon</li>
+      <li>Strawberry</li>
+    </ul>
+  </body>
+</html>
