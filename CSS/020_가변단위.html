@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변단위</title>
+    <style>
+        body {
+            font-size: 10px;
+        }
+        p {
+            font-size: 2em;
+        }
+        div {
+            font-size: 2em;
+        }
+        .one {
+            font-size: 2rem;
+        }
+        .two {
+            /* 부모의 50% */
+            width: 50%;
+            height: 200px;
+            background-color: red;
+        }
+        .three {
+            width: 500px;
+            height: 400px;
+            background-color: blue;
+        }
+        .four {
+            width: 50vw;
+            height: 200px;
+            background-color: pink;
+        }
+        .five {
+            width: 500px;
+            height: 400px;
+            background-color: aqua;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>hello</h1>
+        <p>hello</p>
+
+        <!-- 10x 2x 2x 2 =80px-->
+        <div>
+        <div>
+            <div>hello</div>
+        </div>
+        </div>
+
+        <!-- 16x2 = 32px -->
+        <div>
+        <div>
+            <div class="one">hello</div>
+        </div>
+        </div>
+
+        <div class="three">
+        <div class="two"></div>
+        </div>
+
+        <div class="five">
+        <div class="four"></div>
+        </div>
+    </body>
+</html>

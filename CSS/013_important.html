@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>important</title>
+    <style>
+      /* 같은 important라도 뭐가 붙냐에 따라 점수매겨서 우선시 된다. */
+
+      button {
+        background-color: aliceblue !important;
+      }
+
+      body button {
+        background-color: green;
+      }
+      /* 11점 */
+      button.im {
+        background-color: rgb(158, 216, 255) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="im" style="background-color: red">버튼</button>
+  </body>
+</html>
