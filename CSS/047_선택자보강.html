@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style>
+      /* 앞에 li가 2개 있으면 ok  */
+      li + li {
+      }
+      /* ul안에 손자든 자식이든 상관 x */
+      ul p {
+        font-size: 22px;
+      }
+
+      /* li안에 자식이 p인것만 */
+      li > p {
+        background-color: blue;
+      }
+
+      /* li요소이면서 class명이 one인 */
+      li.one {
+      }
+
+      /* li 자식클래스가 one인거 선택  */
+      li .one {
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>hello world</p>
+      </li>
+      <div>
+        <div>
+          <div>
+            <p>2</p>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </body>
+</html>
