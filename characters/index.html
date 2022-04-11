@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다람쥐</title>
+    <style>
+      @keyframes 귀오른쪽 {
+        from {
+          transform: rotate(30deg);
+        }
+        to {
+          transform: rotate(35deg) translate(10px);
+        }
+      }
+
+      @keyframes 귀왼쪽 {
+        from {
+          transform: rotate(-30deg);
+        }
+        to {
+          transform: rotate(-35deg) translate(-10px);
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .squirrel {
+        position: relative;
+        top: 100px;
+        margin: 50px auto;
+        width: 400px;
+        height: 380px;
+        background-color: rgb(255, 196, 0);
+      }
+      .squirrel .face {
+        position: absolute;
+        bottom: 0;
+        width: 225px;
+        height: 225px;
+        top: 70px;
+        left: 80px;
+        /* border: 5px solid black; */
+        border-radius: 50%;
+        background-color: rgb(197, 123, 53);
+      }
+
+      .squirrel .face_left {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 120px;
+        top: 105px;
+        left: -15px;
+        transform: rotate(-40deg);
+        /* border: 5px solid black; */
+        border-radius: 50%;
+        background-color: rgb(197, 123, 53);
+      }
+      .squirrel .face_right {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 120px;
+        top: 105px;
+        right: -15px;
+        /* border: 5px solid black; */
+        transform: rotate(40deg);
+        border-radius: 50%;
+        background-color: rgb(197, 123, 53);
+      }
+
+      .squirrel .ear {
+        position: absolute;
+        top: 0;
+        width: 80px;
+        border: px solid #000;
+        height: 92px;
+        border-radius: 50%;
+        /* background-color: #ffdbfa; */
+      }
+
+      .squirrel .ear.left {
+        top: 35px;
+        left: 92px;
+        transform: rotate(-30deg);
+        border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
+        background-color: rgb(197, 123, 53);
+        animation: 귀왼쪽 0.9s infinite alternate;
+      }
+      .squirrel .ear.right {
+        top: 35px;
+        right: 100px;
+        transform: rotate(30deg);
+        border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
+        background-color: rgb(197, 123, 53);
+        animation: 귀오른쪽 0.9s infinite alternate;
+      }
+
+      .earline {
+        position: absolute;
+        top: 0;
+        width: 60px;
+        height: 92px;
+        border-radius: 50%;
+      }
+      .earline.right {
+        position: absolute;
+        top: 22px;
+        left: 10px;
+        transform: rotate(2deg);
+        border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        background-color: #ffb584;
+      }
+
+      .earline.left {
+        position: absolute;
+        top: 22px;
+        left: 10px;
+        transform: rotate(-3deg);
+        border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        background-color: #ffb584;
+      }
+
+      .head {
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 70px;
+
+        background-color: rgb(75, 34, 0);
+      }
+
+      .head.one {
+        top: 9px;
+        left: 60px;
+        transform: rotate(-13deg);
+        border-radius: 100% 0% 47% 53% / 10% 0% 100% 83%;
+      }
+      .head.two {
+        left: 103px;
+        border-radius: 100% 0% 47% 53% / 2% 0% 100% 100%;
+      }
+      .head.three {
+        top: 9px;
+        right: 60px;
+        border-radius: 21% 79% 47% 53% / 0% 15% 80% 100%;
+        transform: rotate(13deg);
+      }
+
+      .squirrel .eye {
+        position: absolute;
+        top: 110px;
+        width: 20px;
+        height: 27px;
+        border-radius: 50%;
+        background: rgb(51, 20, 0);
+        z-index: 3;
+      }
+
+      .squirrel .eye.left {
+        left: 150px;
+      }
+      .squirrel .eye.right {
+        right: 150px;
+      }
+      .squirrel .nose {
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        margin-left: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50% 50% 50% 50%;
+        background: rgb(51, 20, 0);
+        z-index: 2;
+      }
+      .pink {
+        position: absolute;
+        width: 70px;
+        height: 85px;
+        border-radius: 50%;
+        background: rgb(255, 143, 143);
+        z-index: 2;
+      }
+      .pink.left {
+        top: 130px;
+        left: 0px;
+        transform: rotate(-60deg);
+      }
+      .pink.right {
+        top: 130px;
+        right: -3px;
+        transform: rotate(60deg);
+      }
+      .mouse {
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        margin-left: -12px;
+        width: 25px;
+        height: 20px;
+        border-radius: 51% 49% 47% 53% / 0% 0% 100% 100%;
+        background: rgb(241, 43, 43);
+        /* z-index: 3; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="squirrel">
+      <div class="ear left">
+        <div class="earline left"></div>
+      </div>
+      <div class="ear right">
+        <div class="earline right"></div>
+      </div>
+
+      <div class="face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="face_right"></div>
+        <div class="face_left"></div>
+        <div class="head one"></div>
+        <div class="head two"></div>
+        <div class="head three"></div>
+        <div class="nose"></div>
+        <div class="pink left"></div>
+        <div class="pink right"></div>
+        <div class="mouse"></div>
+        <div class="mustache left"></div>
+        <div class="mustache right"></div>
+
+        <!-- <div class="pattern1"></div>
+        <div class="pattern2"></div>
+        <div class="pattern3"></div>
+
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+        <div class="pink left"></div>
+        <div class="pink right"></div>
+
+        <div class="mousebottom"></div> -->
+      </div>
+    </div>
+  </body>
+</html>
