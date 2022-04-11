@@ -5,4 +5,5 @@
 ##### login 폼 : https://mandelina.github.io/FrontendSchool_2/signup/login_form.html
 ##### google 폼 : https://mandelina.github.io/FrontendSchool_2/form_company/form.html
 ##### calender : https://mandelina.github.io/FrontendSchool_2/calendar/calendar.html
-##### 다람쥐캐릭터(?) 구현 : https://mandelina.github.io/FrontendSchool_2/licat/index.html
+##### 라이켓응용 구현 : https://mandelina.github.io/FrontendSchool_2/licat/index.html
+##### 다람쥐 캐릭터 구현 : https://mandelina.github.io/FrontendSchool_2/characters/index.html
