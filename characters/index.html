@@ -36,7 +36,7 @@
       body {
         margin: 0;
         padding: 0;
-        background-color: #cab3a4;
+        background-color: #dbccc2;
       }
       .squirrel {
         position: relative;
@@ -54,7 +54,7 @@
         top: 180px;
         left: 200px;
         border-radius: 50%;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         border: 5px solid black;
       }
 
@@ -67,7 +67,7 @@
         left: -15px;
         transform: rotate(-40deg);
         border-radius: 50%;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         border-left:6px solid black ;
       }
       .squirrel .face_right {
@@ -79,7 +79,7 @@
         right: -15px;
         transform: rotate(40deg);
         border-radius: 50%;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         border-right:6px solid black ;
       }
 
@@ -98,7 +98,7 @@
         left: 235px;
         transform: rotate(-15deg);
         border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         animation: 귀왼쪽 0.3s infinite alternate;
       }
       .squirrel .ear.right {
@@ -106,7 +106,7 @@
         right: 200px;
         transform: rotate(15deg);
         border-radius: 50% 50% 18% 82% / 100% 100% 0% 0%;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         animation: 귀오른쪽 0.3s infinite alternate;
       }
 
@@ -309,23 +309,23 @@
       }
       .Acorn.one {
         top: 30px;
-        left: 470px;
+        left: 550px;
       }
 
       .Acorn.two {
         top: 400px;
-        right: 475px;
+        right: 550px;
       }
 
       .Acorn.three {
   
         top: 30px;
-        right: 470px;
+        right: 550px;
       }
 
       .Acorn.four {
         top: 400px;
-        left: 475px;
+        left: 550px;
       }
     
       .squirrel .stomach{
@@ -336,7 +336,7 @@
         height: 235px;
         border-radius: 45%;
         border: 5px solid black;
-        background-color:  rgb(197, 123, 53);
+        background-color:  rgb(194, 141, 92);
       }
 
       .stomach-in{
@@ -351,10 +351,10 @@
       }
       .hand{
         position: absolute;
-        background-color: rgb(197, 123, 53);
+        background-color: rgb(194, 141, 92);
         border-radius: 45% ;
-        top:80px;
-        width: 55px;
+        top:57px;
+        width: 70px;
         height: 35px;
         
       }
@@ -362,13 +362,13 @@
         transform: rotate(40deg);
         border-right: 4px solid black;
         border-bottom: 4px solid black;
-        left: 30px;
+        left: 10px;
       }
       .hand.right{
         transform: rotate(-40deg);
         border-left: 4px solid black;
         border-bottom: 4px solid black;
-        right: 30px;
+        right: 10px;
       }
       .foot {
         position: absolute;
@@ -390,33 +390,69 @@
         z-index: 20;
         position: absolute;
         background-color: rgb(0, 0, 0);
+        border-radius: 50%;
         width: 20px;
-        height: 2px;
+        height: 3px;
       }
       .deco.r{
-        top: 100px;
-        left: 68px;
+        top: 90px;
+        left: 58px;
         transform: rotate(40deg);
       }
       .deco.l{
-        top:100px;
-        right: 68px;
+        top:90px;
+        right: 58px;
         transform: rotate(-40deg);
       }
+      .deco.rr{
+        top: 94px;
+        left: 48px;
+        transform: rotate(40deg);
+      }
+      .deco.ll{
+        top:94px;
+        right: 48px;
+        transform: rotate(-40deg);
+      }
+
+
+      .squirrel .tail{
+        position: absolute;
+        top: 320px;
+        left :440px;
+        border-radius: 45%;
+        border: 5px solid black;
+        width: 53px;
+        height: 170px;
+        transform: rotate(35deg);
+        background-color: rgb(194, 141, 92);
+      }
+     .squirrel .tail_in{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 10px;
+        border-radius: 45%;
+        transform: rotate(5deg);
+        background-color: rgb(56, 19, 4);
+      }
+     .squirrel .tail_in.one{
+       height: 170px;
+        top: 8px;
+        left: 30px;
+      }
+     .squirrel .tail_in.two{
+        top: -4px;
+        left: 10px;
+        height: 180px;        
+      }
+      
      
     </style>
   </head>
   <body>
     <div class="squirrel">
-      <div class="stomach">
-        <div class="stomach-in"></div>
-        <div class="hand left"></div>
-        <div class="hand right"></div>
-        <div class="deco r"></div>
-        <div class="deco l"></div>
-        <div class="foot left"></div>
-        <div class="foot right"></div>
-      </div>
+    
 
       <div class="Acorn one">
         <div class="top"></div>
@@ -430,6 +466,7 @@
           <div class="dot seven"></div>
         </div>
       </div>
+   
       <div class="Acorn two">
         <div class="top"></div>
         <div class="bottom">
@@ -466,11 +503,29 @@
           <div class="dot seven"></div>
         </div>
       </div>
+ 
       <div class="ear left">
         <div class="earline left"></div>
       </div>
       <div class="ear right">
         <div class="earline right"></div>
+      </div>
+
+      <div class="tail"> 
+        <div class="tail_in one"></div>
+        <div class="tail_in two"></div> 
+      </div>
+
+      <div class="stomach">
+        <div class="stomach-in"></div>
+        <div class="hand left"></div>
+        <div class="hand right"></div>
+        <div class="deco r"></div>
+        <div class="deco l"></div>
+        <div class="deco rr"></div>
+        <div class="deco ll"></div>
+        <div class="foot left"></div>
+        <div class="foot right"></div>
       </div>
       <div class="face">
         <div class="eye left"></div>
