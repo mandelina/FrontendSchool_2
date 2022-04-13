@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /*paullab을 딱 하나가진 애만 뽑음  */
+      /* 공백도 포함하지 않음 */
+      /* paullab과 정확히 일치해야 함 */
+      p[class="paullab"] {
+        font-size: 48px;
+      }
+
+      /* 단어에 paul 포함되는것 */
+      p[class~="paul"] {
+        text-align: center;
+      }
+
+      /* 문자열 paul을 포함하는 class명 */
+      p[class*="paul"] {
+        color: red;
+      }
+
+      /* 순서가 중요 */
+      /* 맨앞에 문자열 korea가 있어야 한다. */
+      p[class^="korea"] {
+        color: blue;
+      }
+
+      /* lab 문자열로 끝나는것 */
+      /* lab으로 끝나는 class를 모두 선택하는것이 아닌 맨 끝 문자열만 확인한다. */
+
+      p[class$="lab"] {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="paul">hello world</p>
+    <p class="paul test">hello world</p>
+    <p class="paultest">hello world</p>
+    <p class="korea paullab">hello world</p>
+    <p class="koreaone paullab">hello world</p>
+    <p class="world">hello world</p>
+  </body>
+</html>

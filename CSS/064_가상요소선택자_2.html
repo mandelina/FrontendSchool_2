@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 요소 선택자</title>
+    <style>
+      p {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        border: 5px solid green;
+      }
+      span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      p::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+      p::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>hello <span>world</span></p>
+  </body>
+</html>
