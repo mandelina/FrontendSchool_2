@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bem</title>
+    <style>
+      /* block : 하이픈1개 */
+      .box-green {
+      }
+      .error-red {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- element 네이밍 : 언더바2개 -->
+    <section class="chapter-baseball">
+      <button type="button" class="chapter-baseball__btn"></button>
+    </section>
+
+    <!-- modifer 네이밍 : 하이픈2개 -->
+
+    <!-- 만약 엘레먼트의 모디파이어라면 엘레먼트의 이름을 상속받기 때문에 언더바와 하이픈이 혼용 -->
+
+    <!-- <nav class="nav-global--off"></nav> 잘못된 예 -->
+    <nav class="nav-global nav-global--off">
+      <a href="" class="nav-global__link"></a>
+      <a href="" class="nav-global__link"></a>
+    </nav>
+  </body>
+</html>

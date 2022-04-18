@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      .container {
+        display: flex;
+        height: 100vh;
+        /* flex-wrap: wrap; */
+      }
+
+      li {
+        /* flex-grow: 1; */
+        /* flex-grow: 0; */
+
+        /* flex item의 기본크기 */
+        /* width 100px을 강제하지 않는다. */
+        /* width 주석처리 해보기 */
+        flex-basis: 100px;
+        box-sizing: border-box;
+        /* width: 100px; */
+        height: 50px;
+        background-color: pink;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    ㅜ
+    <ul class="container">
+      <li>1 aaa</li>
+      <li>2 bb</li>
+      <li>3 cccccccccccccccccc</li>
+      <li>4 dd</li>
+      <li>5 e</li>
+      <li>6 f</li>
+      <li>1 aaa</li>
+      <li>2 bb</li>
+      <li>3 cccccccccccccccccc</li>
+      <li>4 dd</li>
+      <li>5 e</li>
+      <li>6 f</li>
+    </ul>
+  </body>
+</html>
