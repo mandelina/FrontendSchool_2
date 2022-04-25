@@ -1,0 +1,15 @@
+$minju1: #fff;
+$minju2: #9acd32;
+$민주: #ff6347;
+$큰글자: 32px;
+
+.one {
+  font-size: $큰글자;
+  color: $minju1;
+}
+.two {
+  color: $minju2;
+}
+.three {
+  color: $민주;
+}

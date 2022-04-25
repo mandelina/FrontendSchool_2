@@ -1,0 +1,19 @@
+// 한줄 주석입니다 -> css에선 존재x
+/*두줄주석*/
+
+ul {
+  li {
+    color: red;
+    font-size: 10px;
+  }
+}
+
+.one {
+  color: red;
+  .two {
+    color: green;
+  }
+  .three {
+    color: blue;
+  }
+}
