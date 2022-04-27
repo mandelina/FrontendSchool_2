@@ -8,3 +8,4 @@
 ##### 라이켓응용 구현 : https://mandelina.github.io/FrontendSchool_2/licat/index.html
 ##### 다람쥐 캐릭터 구현 : https://mandelina.github.io/FrontendSchool_2/characters/index.html
 ##### 위니브_로그인폼 : https://mandelina.github.io/FrontendSchool_2/figma_login/login.html
+##### 이력서(수정중) :https://mandelina.github.io/FrontendSchool_2/resume/resume.html
