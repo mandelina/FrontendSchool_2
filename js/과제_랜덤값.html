@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      p {
+        font-size: 50px;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+    <script>
+      function random_value(a, b) {
+        let num = Math.floor(Math.random() * (b - a) + a);
+        return num;
+      }
+
+      console.log(random_value(5, 15));
+    </script>
+  </body>
+</html>
