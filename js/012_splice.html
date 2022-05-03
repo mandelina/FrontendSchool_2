@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        
+        var avengers = ['spiderman', 'ironman', 'hulk', 'thor'];
+
+        // splice() : 기존의 요소를 삭제하거나, 교체하거나, 새 요소를 추가합니다. 인덱스, 카운트, 아이템 순서로 인자를 전달합니다.
+
+        // 아이템 삭제. 
+        avengers.splice(3, 1); // 3번 인덱스 요소 하나만 삭제
+        avengers.splice(3); // 3번 인덱스부터 전부 삭제
+        // 아이템 추가
+        avengers.splice(3, 0, 'blackwidow');
+        // 아이템 교체
+        avengers.splice(1, 1, 'hulk');
+
+
+         // slice() : 두 개의 인자를 전달하여 배열안에 있는 요소를 새로운 배열로 반환합니다. 원본 요소가 바뀌지 않는것이 포인트! 특히 두 번째 인자에 해당하는 인덱스의 아이템은 포함하지 않습니다.
+
+        // splice 문제
+        var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+        // 1. splice 를 이용해 코끼리를 제거해보세요
+        // 2. 참치 다음에 다금바리를 추가해보세요
+        // 3. 돌고래를 제거하고 옥돔과 갈치를 추가해보세요
+
+
+     
+    </script>
+</body>
+</html>
