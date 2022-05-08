@@ -10,15 +10,36 @@ body {
   left: 0;
   width: 100%;
 }
+
+.main{
+  padding: 30px 0;
+}
+
 .wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  /* position: relative; */
+  /* display: flex; */
+  /* justify-content: center; */
   margin-top: 300px;
 }
 
-.wrapper li {
-  padding: 20px;
+.main{
+  background-color: #636363;
+}
+.timeline{
+  background-color: orange;
+  margin: 0 -30px;
+}
+
+.timeline_item {
+
+  box-sizing: border-box;
+  padding:0 20px;
+  width: 50%;
+
+}
+
+.timeline_item:nth-of-type(even){
+  margin-left: auto;
 }
 
 .title {
@@ -38,11 +59,11 @@ body {
   border-radius: 3px;
   background-color: #235497;
 }
+
 .box {
-  position: relative;
-  padding: 15px;
+  /* position: relative; */
   background-color: #111111;
-  width: 250px;
+  /* width: 250px; */
   height: 100px;
   border-radius: 10px;
 }
