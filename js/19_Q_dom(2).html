@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    
+    .box{
+        margin: 200px auto 0;
+        width: 500px;
+        height: 500px;
+        background-color: black;
+    }
+    .btn{
+       display: flex;
+       justify-content: center;
+       margin-top:50px ;
+       
+    }
+    button{
+        margin: 10px; 
+    }
+    .red_box{
+        background-color: red;
+    }
+    .green_box{
+        background-color: green;
+    }
+    .blue_box{
+        background-color:  blue;
+    }
+
+</style>
+<body>
+
+
+    <div class="box">
+    </div>
+    <ul class="btn">
+       <li> <button class="red">Make me red!</button></li>
+        <li><button class="green">Make me green!</button></li>
+        <li><button class="blue">Make me BLUE!</button></li>
+    </ul>
+
+    <script>
+        const btn_red = document.querySelector('.red');
+        const btn_green = document.querySelector('.green');
+        const btn_blue = document.querySelector('.blue');
+        const box = document.querySelector('.box');
+        const btnArr =[btn_blue,btn_red,btn_green];
+
+        for(let i =0;i<btnArr.length;i++){
+            btnArr[i].addEventListener
+        }
+
+        btnArr.forEach((element)=>{
+            element.addEventListener('click',()=>{
+                box.classList.remove('blue_box',"green_box","red_box");
+                if (element.className =='red'){
+                    box.classList.add('red_box');
+                }
+                else if(element.className =='blue'){
+                    box.classList.add('blue_box');
+
+                }
+                else{
+                    box.classList.add('green_box');
+
+                }
+            })
+        })
+
+        // btn_red.addEventListener('click',function(){
+        //     box.classList.remove("blue_box","green_box")
+        //     box.classList.add("red_box")
+        
+        // })
+        // btn_green.addEventListener('click',function(){
+        //     box.classList.remove("blue_box","red_box")
+        //     box.classList.add("green_box")
+        
+        // })
+
+        // btn_blue.addEventListener('click',function(){
+        //     box.classList.remove("red_box","green_box")
+        //     box.classList.add("blue_box")
+
+        // })
+
+        
+
+
+        
+    </script>
+</body>
+</html>

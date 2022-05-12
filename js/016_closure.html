@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+    </title>
+</head>
+<body>
+    <script>
+
+        // 예제1
+        function makeAdder(x) {
+            var y = 1;
+                  return function(z) {
+            y = 100;
+                return x + y + z;
+            };
+        }
+
+        var add5 = makeAdder(5);
+        var add10 = makeAdder(10);
+
+        console.log(add5(2));  
+        console.log(add10(2));
+
+        // 예제2
+        // 1
+        const x = 100;
+
+        function a() {
+        const x = 1;
+        b();
+        }
+
+        function b() {
+        console.log(x);
+        }
+
+        a(); // 100
+        b(); // 100
+
+
+        // 2
+
+        const xx = 100;
+
+        function a() {
+        const xx = 1;
+        function b() {
+            console.log(xx);
+        }
+        b();
+        }
+
+        a();
+
+        // 예제3
+        function 승수제조기(){
+            let value = 0;
+            function 승수(){
+                return ++value**2
+            }
+            return 승수
+        }
+
+        let 승 = 승수제조기();
+        승()
+        승()
+        승()
+        value //출력할 수 없습니다. 은닉화가 되었기 때문입니다.
+
+</script>
+</body>
+</html>
