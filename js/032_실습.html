@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const arr = ["떡복이", "맥쥬", "족발", "피자", "광어", "짬뽕"];
+      const food1 = new Food(arr);
+      const food2 = new Food(arr);
+      function Food(arr) {
+        this.menu = arr;
+      }
+
+      Food.prototype.randomFood = function () {
+        let food = this.menu[Math.floor(Math.random() * arr.length)];
+        console.log(food);
+      };
+    </script>
+  </body>
+</html>

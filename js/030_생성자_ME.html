@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <script>
+      // const minju = {
+      //   name: "문민주",
+      //   address: "경기도 시흥",
+      //   canEat: function () {
+      //     console.log("민주가 먹는다");
+      //   },
+      //   teaching: function (student) {
+      //     student.levelUp();
+      //   },
+      //   calc: function (base, exp) {
+      //     return base ** exp;
+      //   },
+      // };
+
+      // const student = {
+      //   level: 1,
+      //   levelUp: function () {
+      //     this.level++;
+      //   },
+      // };
+
+      // 생성자 함수로 만들기
+
+      function Human(name, address) {
+        this.name = name;
+        this.address = address;
+      }
+
+      Human.prototype.canEat = function () {
+        console.log(`${this.name}가 먹는다`);
+      };
+      Human.prototype.teaching = function () {
+        student.levelUp();
+      };
+      Human.prototype.calc = function (base, exp) {
+        return base ** exp;
+      };
+
+      function Student() {
+        this.level = 1;
+      }
+      Student.prototype.levelUp = function () {
+        this.level++;
+        console.log(this.level);
+      };
+
+      const minju = new Human("민주", "시흥");
+    </script>
+  </body>
+</html>
