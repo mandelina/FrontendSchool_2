@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function Robot(name) {
+        this.name = name;
+      }
+
+      Robot.prototype.getName = function () {
+        console.log(`제 이름은 ${this.name}입니다.`);
+      };
+
+      const bot1 = new Robot("delina");
+      const bot2 = Robot("delina"); //객체 안만들어짐 new키워드 없기때문
+
+      class RobotClass {
+        constructor(name) {
+          this.name = name;
+        }
+
+        getName() {
+          console.log(`제 이름은 ${this.name}입니다.`);
+        }
+      }
+
+      const botClass1 = new RobotClass("밍두");
+      const botClass2 = new RobotClass("헷");
+    </script>
+  </body>
+</html>

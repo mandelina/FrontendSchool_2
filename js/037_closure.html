@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var outer = function () {
+        var a = 1;
+        var inner = function () {
+          // inner  상위함수 outer에 접근가능하다.
+          var b = 6;
+          var c = 7;
+          a = a + b + c;
+          console.log(a);
+        };
+        return inner();
+      };
+      var newInner = outer(); // return 값을 newInner가 저장, outer은  return을 만나 종료
+      newInner(); // a값이 찍힌다. 클로저!!
+
+      console.log(a); //할수없다. 외부에서 함수 안의 값은 접근 불가.
+    </script>
+  </body>
+</html>

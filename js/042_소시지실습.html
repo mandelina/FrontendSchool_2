@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Sausage {
+        constructor(Ingred_one, Ingred_two) {
+          this.Ingred_one = Ingred_one;
+          this.Ingred_two = Ingred_two;
+        }
+        taste() {
+          console.log(
+            `${this.Ingred_one}와 ${this.Ingred_two}맛이 나는 소시지 나왔습니다 ^_^`
+          );
+        }
+      }
+
+      class FireSausage extends Sausage {
+        constructor(Ingred_one, Ingred_two) {
+          super(Ingred_one, Ingred_two);
+          console.log(this);
+          this.source1 = "케챱";
+          this.source2 = "머스타드";
+        }
+        taste() {
+          super.taste();
+          console.log("불맛이 나기 시작합니다.");
+        }
+      }
+
+      const s1 = new FireSausage("치즈소스", "파맛");
+    </script>
+  </body>
+</html>
