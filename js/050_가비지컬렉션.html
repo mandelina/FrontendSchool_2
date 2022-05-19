@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var me = { age: 30 };
+      var you = me;
+      // { age: 30 }가 참조하는 카운트 : 2
+      me = null;
+      // { age: 30 }가 참조하는 카운트 : 1
+      you = null;
+      // { age: 30 }가 참조하는 카운트 : 0  ==> 가비지 컬렉션 대상
+
+      //case2
+
+      var x = {
+        y: {
+          z: 1,
+        },
+      };
+
+      //x가 참조하는 객체는 obj1 , y가 참조하는 객체는 obj2
+
+      var a = x; // obj1 참조카운트 : 2 (x ,a )
+      x = 1; // obj1 참조카운트 : 1  (a)
+      var b = a.y; //{ z: 1, },   //obj2 참조카운트 2 (a.y , b)
+      a = 2; // obj2 참조카운트: 1  (b) , obj1 : 0 (x)
+
+      //==> obj1 은 가비지컬렉터에 의해 사라져야하지만 obj2가 있으므로 obj1은 메모리 누수가 발생
+
+      //case3
+
+      function outer() {
+        let privateVal = ["test"];
+
+        function getPrivate() {
+          return privateVal;
+        }
+        return getPrivate;
+      }
+
+      const private = outer(); // getPrivate함수가 들어감
+
+      let secretVal = private();
+
+      //secretVal이 남아있는한 outer함수는 사라지지 않음
+      //클로저 패턴은 메모리누수가 됨
+      // 따라서 secretVal를 다쓰면 null이나 undefine으로 연결을 끊어줘야함
+      console.log(secretVal);
+      secretVal = null; // 연결을 끊어줌  즉 privateVal의 값을  null로 만든다!
+    </script>
+  </body>
+</html>

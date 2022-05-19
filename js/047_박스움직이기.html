@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+    body {
+      margin: 200px;
+    }
+    .element {
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+    }
+  </style>
+  <body>
+    <div class="element"></div>
+    <script>
+      const element = document.querySelector(".element");
+      let pos = 0;
+      let keys = {}; //무슨키를 눌렀는지에 대한 정보 저장
+      function move(e) {
+        keys[e.key] = true;
+        console.log(keys);
+      }
+
+      function stop(e) {
+        keys[e.key] = false;
+        console.log(keys);
+      }
+
+      document.addEventListener("keydown", move);
+      document.addEventListener("keyup", stop);
+
+      function play() {
+        if (keys.ArrowRight) {
+          pos += 5;
+          element.style.transform = `translateX(${pos}px)`;
+        }
+        if (keys.ArrowLeft) {
+          pos -= 5;
+          element.style.transform = `translateX(${pos}px)`;
+        }
+        window.requestAnimationFrame(play);
+      }
+
+      window.requestAnimationFrame(play); //
+
+      //document.addEventListener("keydown", move);
+      //   function move(e) {
+      //     const keyName = e.key;
+      //     if (keyName == "ArrowRight") {
+      //       pos += 5;
+      //       element.style.transform = `translateX(${pos}px)`;
+      //       console.log("오른쪽");
+      //     } else if (keyName == "ArrowLeft") {
+      //       pos -= 5;
+      //       element.style.transform = `translateX(${pos}px)`;
+      //       console.log("왼쪽");
+      //     } else if (keyName == "ArrowUp") {
+      //       console.log("위");
+      //     } else {
+      //       console.log("아래");
+      //     }
+      //   }
+    </script>
+  </body>
+</html>

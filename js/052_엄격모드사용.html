@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <!-- **엄격 모드의 특징**
+
+1. 선언하지 않은 변수에 값을 할당할 수 없습니다.
+2. 읽기 전용 객체에 값을 할당하면 에러가 발생합니다. (일반 모드에서는 조용한 에러 —> 무시 처리)
+3. 지울수 없는 값을 지우려고 하면 에러가 발생합니다. (일반 모드에서는 조용한 에러 —> 무시 처리)
+4. 함수 파라메터에 중복된 이름을 사용할 수 없습니다. -->
+
+    <script>
+      "use strict"; //엄격모드 선언
+
+      str = "안녕?"; //선언하지 않은 변수에 할당 -->에러
+      //------------------------------------------------------------
+      var undefined = "undefined"; //읽기 전용 객체에 값을 할당하면 에러
+
+      var Infinity = 100; //읽기 전용 객체에 값을 할당하면 에러
+
+      var PI = 0.5; //읽기 전용 객체에 값을 할당하면 에러
+      //--------------------------------------------------------
+
+      //지울수 없는 값을 지우려고 하면 에러
+      const Employee = {
+        firstname: "John",
+        lastname: "Doe",
+      };
+      console.log(Eployee.firstname);
+
+      delete Employee.firstname;
+      console.log(Eployee.firstname);
+
+      delete Object.prototype; //원래는 에러없음 삭제는 안되지만  (조용한에러)
+      //--------------------------------------------------------
+
+      function add(a, a, b) {
+        console.log(a + a + b);
+      }
+      add(1, 2, 3);
+    </script>
+  </body>
+</html>
