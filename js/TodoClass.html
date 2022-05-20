@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>추가하기</button>
+
+    <script>
+      class TodoClass {
+        constructor(content, state = false) {
+          this.content = content;
+          this.state = state;
+        }
+        changeState() {
+          this.state = !this.state;
+        }
+      }
+
+      class TodoManager {
+        constructor() {
+          this.Todo = [];
+        }
+
+        addItem(Todo) {
+          this.Todo.push(new TodoClass(Todo));
+        }
+        getItem() {
+          return this.Todo;
+        }
+        getLeftTodoCount() {
+          return this.Todo.reduce((total, current) => {
+            if (current.state === false) {
+              return ++total; //아직 끝나지 않은 일이면 값++
+            } else {
+              return total;
+            }
+          }, 0); //initial value 0
+
+          //같은뜻
+          //   return this.Todo.filter((todo) => todo.state === false).length;
+        }
+      }
+
+      const todos = new TodoManager();
+    </script>
+  </body>
+</html>
