@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <ul class="num"></ul>
+
+    <script>
+      const num = document.querySelector(".num");
+
+      ["one", "two", "three"].forEach((text) => {
+        const li = document.createElement("li"); //요소 노드 생성
+        const textNode = document.createTextNode(text); //textnode생성
+        li.appendChild(textNode); //텍스트 노드를 자식노드로 넣기
+        num.appendChild(li); //ul에 자식노드로 li넣기
+      });
+    </script>
+  </body>
+</html>

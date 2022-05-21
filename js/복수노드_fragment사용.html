@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <ul class="num"></ul>
+
+    <script>
+      const num = document.querySelector(".num");
+      const fragment = document.createDocumentFragment(); //fragment생성
+
+      ["one", "two", "three"].forEach((text) => {
+        const li = document.createElement("li");
+        const textNode = document.createTextNode(text);
+        li.appendChild(textNode);
+        fragment.appendChild(li); //  fragment에 자식노드로 li넣기
+      });
+      num.appendChild(fragment); // 기존 DOM에 추가
+    </script>
+  </body>
+</html>
