@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      setTimeout(() => {
+        console.log("5초끝");
+      }, 5000);
+      function cook(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      const myCake = async () => {
+        await cook(1000);
+        return "케이크";
+      };
+
+      const myCoffee = async () => {
+        await cook(500);
+        return "커피";
+      };
+      const myCookie = async () => {
+        await cook(5000);
+        return "쿠키";
+      };
+
+      async function promiseProcess() {
+        const results = await Promise.all([myCake(), myCoffee(), myCookie()]);
+        console.log(results);
+      }
+
+      promiseProcess();
+    </script>
+  </body>
+</html>
