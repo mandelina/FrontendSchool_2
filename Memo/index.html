@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+  </head>
+  <body>
+    <section class="memo">
+      <h1 class="title">메모장</h1>
+      <labe for="text" class="ir">메모입력</labe>
+      <input type="text" class="inputBox" placeholder="단어를 입력하세요!" />
+      <ul class="wordList">
+        <li class="word">test1</li>
+      </ul>
+      <button class="btn">clear</button>
+    </section>
+
+    <script>
+      // setItem(key, value) – 키-값 쌍 저장
+      // getItem(key) – 키에 해당하는 값 호출
+      // removeItem(key) – 해당 값 삭제
+      // clear() – 모든 데이터 삭제
+      // key(index) – 인덱스(index)에 해당하는 키 호출
+      // length – 저장된 항목의 개수
+      const $wordList = document.querySelector(".wordList");
+      const $inputBox = document.querySelector(".inputBox");
+      const $btn = document.querySelector(".btn");
+
+      let id = localStorage.length;
+
+      $inputBox.addEventListener("keypress", (e) => {
+        if (e.keyCode == 13) {
+          localStorage.setItem(id, e.target.value);
+          $inputBox.value = "";
+          id += 1;
+          renderList();
+        }
+      });
+
+      function renderList() {
+        $wordList.innerHTML = null;
+        for (let i = 0; i < localStorage.length; i++) {
+          const $li = document.createElement("li");
+          $li.textContent = localStorage[i];
+          $li.classList.add("word");
+          $wordList.appendChild($li);
+        }
+      }
+      $btn.addEventListener("click", (e) => {
+        localStorage.clear();
+        location.reload();
+      });
+
+      renderList();
+    </script>
+  </body>
+</html>
