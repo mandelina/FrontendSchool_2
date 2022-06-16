@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script> 
+    <title>리덕스 사용 실습</title>
+</head>
+<style>
+    body {
+        padding: 70px;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 10px;
+        border-color: rebeccapurple;
+    }
+    .card {
+        width: 200px;
+        height: 100px;
+        border: 2px solid lightcoral;
+    }
+</style>
+<body>
+  
+        <h1>테두리 색깔 바꾸기</h1>
+        <input class="inputBox" type="text"> 
+        <button class="inputBtn"> 확인</button>
+        <button class="red">red</button>
+        <button class="green">green</button>  
+        <button class="blue">blue</button> 
+        
+        <ul>
+            <li class="card redBox "></li>
+            <li class="card  greenBox"></li>
+            <li class="card  blueBox"></li>
+            <li class="card redBox"></li>
+            <li class="card greenBox"></li>
+            <li class="card blueBox"></li>
+        </ul>
+    </section>
+
+<script>
+
+    function reducer(state,action){
+        console.log(state,action)
+        if(state === undefined){
+            return {color : "black"}
+        }
+        var newState;
+        if(action.type ==="CHANGE_BORDER_COLOR"){
+            console.log(state);
+            newState= {...state, color :action.color};
+          console.log(newState);
+        }
+        if (action.type ==="CHANGE_TEXT"){
+            console.log(state);
+            newState= {...state, text :action.text};
+          console.log(newState);
+        }
+        return newState
+    }
+
+    var store = Redux.createStore(
+        reducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+          window.__REDUX_DEVTOOLS_EXTENSION__() 
+          // redux dev tools를 사용하기 위한 코드
+      );
+
+
+      //--------------------------------------
+
+      const redBtn = document.querySelector(".red");
+      const greenBtn = document.querySelector(".green");
+      const blueBtn = document.querySelector(".blue");
+    const btn = document.querySelector(".inputBtn")
+      const box = document.querySelector(".card")
+      const inputBox = document.querySelector(".inputBox")
+
+
+      function red(){
+      var state= store.getState();
+      console.log(state.color)
+      btn.addEventListener('click',(e)=>{
+        console.log(inputBox.value)
+        store.dispatch(
+            {type:"CHANGE_TEXT",content: inputBox.value} 
+        )
+      })
+
+      box.innerHTML= `${state.text}`
+      box.style.borderColor = state.color ;
+      redBtn.addEventListener('click',()=>{
+        console.log("red 클릭")
+        store.dispatch(
+            {type:"CHANGE_BORDER_COLOR",color:'red'}
+        );
+      });
+    }
+    store.subscribe(red); //값이 바뀔때마다 red함수 호출
+    red();
+
+
+    function green(){
+      var state= store.getState();
+    
+      console.log(state.color)
+      box.style.borderColor = state.color ;
+      
+      greenBtn.addEventListener('click',()=>{
+        console.log("green 클릭")
+        store.dispatch(
+            {type:"CHANGE_BORDER_COLOR",color:'green'}
+        );
+      });
+    }
+    store.subscribe(green); //값이 바뀔때마다 green함수 호출
+    green();
+
+    
+    function blue(){
+      var state= store.getState();
+      console.log(state.color)
+
+      box.style.borderColor = state.color ;
+      
+      blueBtn.addEventListener('click',()=>{
+        console.log("blue 클릭")
+        store.dispatch(
+            {type:"CHANGE_BORDER_COLOR",color:'blue'}
+        );
+      });
+    }
+    store.subscribe(blue); //store에 저장된 애값이 바뀔때마다 blue함수 호출
+    blue();
+
+</script>
+</body>
+</html>
