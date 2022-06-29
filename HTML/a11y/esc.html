@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .tooltip {
+        position: relative;
+        padding: 30px;
+        border: 1px solid black;
+      }
+      .tooltip:hover .tooltip-content,
+      .tooltip:focus .tooltip-content {
+        display: block;
+      }
+
+      .tooltip-content {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 140px;
+        padding: 10px;
+        border: 2px solid rgb(203, 241, 168);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tooltip" role="tooltip" tabindex="0">
+      구독게시판
+      <span class="tooltip-content">
+        구독 게시판의 글을 확인헤보세요! 구독 좋아요 알림설정까지!</span
+      >
+    </div>
+
+    <form action="">
+      <label for="test">입력</label>
+      <input type="text" id="test" required />
+      <button>제출</button>
+    </form>
+    <script>
+      //invalid :
+      const myInp = document.querySelector("#test");
+      myInp.addEventListener("invalid", (e) => {
+        e.preventDefault();
+        // createElement로 새로운 경고창 만들기!
+      });
+
+      const tooltip = document.querySelector(".tooltip");
+      const toolCont = document.querySelector(".tooltip-content");
+
+      tooltip.addEventListener("keydown", (e) => {
+        if (e.keyCode === 27) {
+          toolCont.style.display = "none";
+        }
+      });
+
+      //focus가 벗어났을때 이벤트가 실행
+      tooltip.addEventListener("blur", () => {
+        toolCont.removeAttribute("style");
+      });
+      //   tooltip.onkeydown = function (e) {
+      //     if (e.keyCoed === "27") {
+      //       toolCont.style.display = "none";
+      //     }
+      //   };
+    </script>
+  </body>
+</html>
